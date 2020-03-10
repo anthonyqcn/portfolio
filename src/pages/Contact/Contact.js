@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import GetAppIcon from '@material-ui/icons/GetApp';
 import Resume from './Resume';
+import pdf from './Anthony_QC_Nguyen.pdf';
 
 function Contact() {
 	return (
@@ -12,7 +13,7 @@ function Contact() {
 				My Resume!
 			</Typography>
 			<Resume />
-			<Link to="./Anthony_QC_Nguyen.pdf" target="_blank" download>
+			<Link to={pdf} target="_blank" download>
 				<Button variant="contained" color="secondary">
 					{' '}
 					<GetAppIcon />

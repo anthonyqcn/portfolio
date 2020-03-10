@@ -1,0 +1,37 @@
+.headshot-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headshot-paper {
+	margin-top: 2rem;
+	width: 20rem;
+	display: flex;
+	justify-content: center;
+}
+
+.headshot {
+	width: 20rem;
+	height: 13.5rem;
+	border-radius: 0.25rem;
+}
+
+.intro {
+	width: 100%;
+	text-align: start;
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+
+a {
+	color: #ff5b24;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ff5b24;
+	font-weight: bold;
+}

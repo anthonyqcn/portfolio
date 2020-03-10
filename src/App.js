@@ -1,5 +1,5 @@
 import React from 'react';
-import './media.css';
+import './Media.css';
 import './App.css';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
@@ -10,10 +10,10 @@ import {
 	responsiveFontSizes
 } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Home from './pages/Home';
-import Work from './pages/Work';
-import Resume from './pages/Resume';
-import Blog from './pages/Blog';
+import Home from './pages/Home/Home';
+import Work from './pages/Work/Work';
+import Resume from './pages/Resume/Resume';
+import Blog from './pages/Blog/Blog';
 import { ReactComponent as Logo } from './Logo.svg';
 import LeagueSpartan from './fonts/LeagueSpartan-Bold.ttf';
 import LibreBaskerville from './fonts/LibreBaskerville-Regular.ttf';
@@ -67,11 +67,21 @@ let theme = createMuiTheme({
 		tonalOffset: 0.2
 	},
 	typography: {
+		h1: {
+			fontFamily: 'League-Spartan, Robot, sans-serif',
+			fontSize: '5rem',
+			margin: '1.15rem'
+		},
 		h2: {
+			fontFamily: 'League-Spartan, Roboto, sans-serif',
+			fontSize: '2rem'
+		},
+		h3: {
 			fontFamily: 'League-Spartan, Roboto, sans-serif',
 			fontSize: '1.5rem'
 		},
-		fontFamily: 'LibreBaskerville, Arial, serif'
+		fontFamily: 'LibreBaskerville, Arial, serif',
+		fontSize: '1rem'
 	},
 	overrides: {
 		MuiCssBaseline: {
@@ -100,23 +110,26 @@ function App() {
 					>
 						<Logo className="logo" />
 						<div className="nav">
-							<Typography variant="h2">
+							<Typography variant="h3">
 								<Link to="/" className="nav-link">
 									Home
 								</Link>
 							</Typography>
-							<Typography variant="h2">
-								<Link to="/work" className="nav-link">
+							<Typography variant="h3">
+								<Link to="../Work/Work" className="nav-link">
 									Work
 								</Link>
 							</Typography>
-							<Typography variant="h2">
-								<Link to="/resume" className="nav-link">
+							<Typography variant="h3">
+								<Link
+									to="../Resume/Resume"
+									className="nav-link"
+								>
 									Resume
 								</Link>
 							</Typography>
-							<Typography variant="h2">
-								<Link to="/blog" className="nav-link">
+							<Typography variant="h3">
+								<Link to="../Blog/Blog" className="nav-link">
 									Blog
 								</Link>
 							</Typography>

@@ -1,9 +1,20 @@
+/*@font-face {
+	font-family: 'League-Spartan';
+	src: local('League-Spartan-Bold'),
+		url(./fonts/LeagueSpartan-Bold.ttf) format('ttf');
+}
+@font-face {
+	font-family: 'Libre-Baskerville';
+	src: local('Libre-Baskerville'),
+		url(./fonts/LibreBaskerville-Regular.ttf) format('ttf');
+}*/
+
 .App {
 	text-align: center;
 }
 
 .App-header {
-	background-color: #282c34;
+	background-color: #1c1c1c;
 	min-height: 60px;
 	display: flex;
 	flex-direction: row;

@@ -12,7 +12,7 @@ import {
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Home from './pages/Home/Home';
 import Work from './pages/Work/Work';
-import Resume from './pages/Resume/Resume';
+import Contact from './pages/Contact/Contact';
 import Blog from './pages/Blog/Blog';
 import { ReactComponent as Logo } from './Logo.svg';
 import LeagueSpartan from './fonts/LeagueSpartan-Bold.ttf';
@@ -69,7 +69,7 @@ let theme = createMuiTheme({
 	typography: {
 		h1: {
 			fontFamily: 'League-Spartan, Robot, sans-serif',
-			fontSize: '5rem',
+			fontSize: '4rem',
 			margin: '1.15rem'
 		},
 		h2: {
@@ -122,10 +122,10 @@ function App() {
 							</Typography>
 							<Typography variant="h3">
 								<Link
-									to="../Resume/Resume"
+									to="../Contact/Contact"
 									className="nav-link"
 								>
-									Resume
+									Contact
 								</Link>
 							</Typography>
 							<Typography variant="h3">
@@ -138,7 +138,7 @@ function App() {
 
 					<Route path="/" exact component={Home} />
 					<Route path="/work" component={Work} />
-					<Route path="/resume" component={Resume} />
+					<Route path="/contact" component={Contact} />
 					<Route path="/blog" component={Blog} />
 				</div>
 			</BrowserRouter>

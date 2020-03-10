@@ -6,8 +6,6 @@ import Headshot from './Headshot.jpg';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Smash from './smash.png';
@@ -32,6 +30,7 @@ function Home() {
 					I’m a graduating senior at the University of Washington
 					studying{' '}
 					<a
+						// eslint-disable-next-line
 						target="_blank"
 						href="https://www.hcde.washington.edu/bs"
 					>
@@ -40,7 +39,11 @@ function Home() {
 					, which is a discipline that combines my love of technology
 					with my passion for helping people. I currently work as a
 					Junior Product Manager at{' '}
-					<a target="_blank" href="https://www.carina.org">
+					<a
+						// eslint-disable-next-line
+						target="_blank"
+						href="https://www.carina.org"
+					>
 						Carina
 					</a>
 					, a not-for-profit startup that builds platforms to help

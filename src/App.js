@@ -14,7 +14,7 @@ import Home from './pages/Home';
 import Work from './pages/Work';
 import Resume from './pages/Resume';
 import Blog from './pages/Blog';
-
+import { ReactComponent as Logo } from './Logo.svg';
 import LeagueSpartan from './fonts/LeagueSpartan-Bold.ttf';
 import LibreBaskerville from './fonts/LibreBaskerville-Regular.ttf';
 
@@ -67,8 +67,9 @@ let theme = createMuiTheme({
 		tonalOffset: 0.2
 	},
 	typography: {
-		h1: {
-			fontFamily: 'League-Spartan, Roboto, sans-serif'
+		h2: {
+			fontFamily: 'League-Spartan, Roboto, sans-serif',
+			fontSize: '1.5rem'
 		},
 		fontFamily: 'LibreBaskerville, Arial, serif'
 	},
@@ -89,18 +90,38 @@ function App() {
 			<CssBaseline />
 			<BrowserRouter>
 				<div className="App">
-					{/*<header className="App-header">*/}
-					<AppBar position="sticky">
-						<Typography variant="h1">
-							<Link to="/">Home</Link>
-						</Typography>
-						<Typography variant="h2">
-							<Link to="/work">Work</Link>
-						</Typography>
-						<Link to="/resume">Resume</Link>
-						<Link to="/blog">Blog</Link>
+					<AppBar
+						position="sticky"
+						style={{
+							flexDirection: 'row',
+							justifyContent: 'space-between',
+							alignItems: 'center'
+						}}
+					>
+						<Logo className="logo" />
+						<div className="nav">
+							<Typography variant="h2">
+								<Link to="/" className="nav-link">
+									Home
+								</Link>
+							</Typography>
+							<Typography variant="h2">
+								<Link to="/work" className="nav-link">
+									Work
+								</Link>
+							</Typography>
+							<Typography variant="h2">
+								<Link to="/resume" className="nav-link">
+									Resume
+								</Link>
+							</Typography>
+							<Typography variant="h2">
+								<Link to="/blog" className="nav-link">
+									Blog
+								</Link>
+							</Typography>
+						</div>
 					</AppBar>
-					{/*</header>*/}
 
 					<Route path="/" exact component={Home} />
 					<Route path="/work" component={Work} />

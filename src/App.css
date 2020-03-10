@@ -1,29 +1,24 @@
-/*@font-face {
-	font-family: 'League-Spartan';
-	src: local('League-Spartan-Bold'),
-		url(./fonts/LeagueSpartan-Bold.ttf) format('ttf');
-}
-@font-face {
-	font-family: 'Libre-Baskerville';
-	src: local('Libre-Baskerville'),
-		url(./fonts/LibreBaskerville-Regular.ttf) format('ttf');
-}*/
-
 .App {
 	text-align: center;
 }
 
-.App-header {
-	background-color: #1c1c1c;
-	min-height: 60px;
+.logo {
+	width: 3.5rem;
+	height: 3.5rem;
+}
+
+.nav {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
+	justify-content: space-around;
+	width: 70%;
 }
-.App-header a {
+
+.nav-link {
 	color: white;
-	margin: 0 25px;
+	text-decoration: none;
+}
+
+.nav-link:hover {
+	color: #ff5b24;
 }

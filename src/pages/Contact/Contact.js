@@ -13,6 +13,10 @@ import './Contact.css';
 const useStyles = makeStyles({
 	root: {
 		marginBottom: '1rem'
+	},
+	test: {
+		marginTop: '1rem',
+		marginBottom: '1rem'
 	}
 });
 
@@ -44,6 +48,7 @@ function Contact() {
 					{' '}
 					<a
 						href="https://www.linkedin.com/in/anthonyqcn/"
+						// eslint-disable-next-line
 						target="_blank"
 						className="column button-links"
 					>
@@ -62,6 +67,7 @@ function Contact() {
 					{' '}
 					<a
 						href="https://github.com/anthonyqcn"
+						// eslint-disable-next-line
 						target="_blank"
 						className="column button-links"
 					>
@@ -69,26 +75,28 @@ function Contact() {
 					</a>
 				</Button>
 			</div>
-			<Resume />
-			<Button
-				variant="contained"
-				color="secondary"
-				size="medium"
-				endIcon={<GetAppIcon />}
-				classes={{
-					root: classes.root
-				}}
-			>
-				{' '}
-				<Link
-					to={pdf}
-					target="_blank"
-					download
-					className="column button-links"
+			<div className="columnize">
+				<Resume />
+				<Button
+					variant="contained"
+					color="secondary"
+					size="medium"
+					endIcon={<GetAppIcon />}
+					classes={{
+						root: classes.test
+					}}
 				>
-					Download
-				</Link>
-			</Button>
+					{' '}
+					<Link
+						to={pdf}
+						target="_blank"
+						download
+						className="button-links"
+					>
+						Download
+					</Link>
+				</Button>
+			</div>
 		</div>
 	);
 }

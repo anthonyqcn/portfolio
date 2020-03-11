@@ -3,7 +3,7 @@ import { Document, Page } from 'react-pdf';
 import Paper from '@material-ui/core/Paper';
 import resume from './Anthony_QC_Nguyen.pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
-import './Resume.css';
+import './Contact.css';
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 

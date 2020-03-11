@@ -1,0 +1,18 @@
+.resume-container {
+	display: inline-block;
+}
+
+.column {
+	display: block;
+}
+
+.contact-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.button-links {
+	color: white;
+	text-decoration: none;
+}

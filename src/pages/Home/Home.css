@@ -26,12 +26,12 @@
 	padding: 1rem;
 }
 
-a {
+.body-links {
 	color: #ff5b24;
 	text-decoration: none;
 }
 
-a:hover {
+.body-links:hover {
 	color: #ff5b24;
 	font-weight: bold;
 }

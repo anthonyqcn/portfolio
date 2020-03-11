@@ -68,19 +68,22 @@ let theme = createMuiTheme({
 	},
 	typography: {
 		h1: {
-			fontFamily: 'League-Spartan, Robot, sans-serif',
 			fontSize: '4rem',
 			margin: '1.15rem'
 		},
 		h2: {
-			fontFamily: 'League-Spartan, Roboto, sans-serif',
 			fontSize: '2rem'
 		},
 		h3: {
-			fontFamily: 'League-Spartan, Roboto, sans-serif',
 			fontSize: '1.5rem'
 		},
-		fontFamily: 'LibreBaskerville, Arial, serif',
+		body1: {
+			fontFamily: 'LibreBaskerville, serif'
+		},
+		body2: {
+			fontFamily: 'LibreBaskerville, serif'
+		},
+		fontFamily: 'League-Spartan, Roboto, sans-serif',
 		fontSize: '1rem'
 	},
 	overrides: {

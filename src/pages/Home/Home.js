@@ -33,6 +33,7 @@ function Home() {
 						// eslint-disable-next-line
 						target="_blank"
 						href="https://www.hcde.washington.edu/bs"
+						className="body-links"
 					>
 						Human Centered Design and Engineering
 					</a>
@@ -43,6 +44,7 @@ function Home() {
 						// eslint-disable-next-line
 						target="_blank"
 						href="https://www.carina.org"
+						className="body-links"
 					>
 						Carina
 					</a>

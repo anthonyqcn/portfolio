@@ -1,9 +1,12 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 function Blog() {
 	return (
 		<div className="page">
-			<h1>Coming soon!</h1>
+			<Typography variant="h1" color="secondary">
+				COMING SOON!
+			</Typography>
 		</div>
 	);
 }

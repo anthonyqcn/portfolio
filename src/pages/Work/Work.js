@@ -1,36 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import { Transition } from 'react-transition-group';
-
-const duration = 1000;
-
-const defaultStyle = {
-	transition: `transform ${duration}ms ease-in-out`,
-	transform: `scale(0,0) translate(0,1200px)`
-};
-
-const transitionStyles = {
-	entering: { transform: `scale(1,1) translate(0,0px)` },
-	entered: { transform: `scale(1,1) translate(0,0px)` },
-	exiting: { transform: `scale(0,0) translate(0,1200px)` },
-	exited: { transform: `scale(0,0) translate(0,1200px)` }
-};
+import React /*, { useState, useEffect }*/ from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import './Work.css';
+import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import ShopkeepLogo from './Shopkeep/logo.png';
+import BonitoLogo from './Bonito/logo.png';
+/*import Shopkeep from './Shopkeep/Shopkeep';
+import Bonito from './Bonito/Bonito';*/
 
 function Work() {
-	const [inProp, setInProp] = useState(false);
-	useEffect(() => {
-		setInProp(true);
-	}, []);
 	return (
 		<div className="page">
-			<Transition appear in={inProp} timeout={duration}>
-				{state => (
-					<div
-						style={{ ...defaultStyle, ...transitionStyles[state] }}
-					>
-						<h1>This is my work!!!!!!</h1>
-					</div>
-				)}
-			</Transition>
+			{/*<BrowserRouter>*/}
+			<Typography variant="h1" color="secondary" className="header">
+				PORTFOLIO OF WORK
+			</Typography>
+			<Typography variant="h2">
+				Here's a bunch of projects I've worked on!
+			</Typography>
+			<Card
+				style={{
+					margin: '1rem',
+					paddingTop: '.5rem',
+					paddingBottom: '.4rem'
+				}}
+			>
+				<CardActionArea>
+					<Link to="/Work/Shopkeep" className="proj-link">
+						<CardMedia
+							component="img"
+							src={ShopkeepLogo}
+							title="Shopkeep"
+							alt=""
+							height="100"
+						/>
+						<CardContent>
+							<Typography
+								gutterBottom
+								variant="h3"
+								component="h3"
+							>
+								Shopkeep
+							</Typography>
+							<Typography
+								variant="subtitle1"
+								color="textSecondary"
+								component="p"
+							>
+								My full User-Centered Design process in one
+								project!
+							</Typography>
+						</CardContent>
+					</Link>
+				</CardActionArea>
+			</Card>
+			<Card
+				style={{
+					margin: '1rem',
+					paddingTop: '.5rem',
+					paddingBottom: '.4rem'
+				}}
+			>
+				<CardActionArea>
+					<Link to="/Work/Bonito" className="proj-link">
+						<CardMedia
+							component="img"
+							src={BonitoLogo}
+							title="Bonito"
+							alt=""
+							height="100"
+						/>
+						<CardContent>
+							<Typography
+								gutterBottom
+								variant="h3"
+								component="h3"
+							>
+								Bonito
+							</Typography>
+							<Typography
+								variant="subtitle1"
+								color="textSecondary"
+								component="p"
+							>
+								My first product management project from start
+								to finish!
+							</Typography>
+						</CardContent>
+					</Link>
+				</CardActionArea>
+			</Card>
 		</div>
 	);
 }

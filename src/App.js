@@ -10,13 +10,15 @@ import {
 	responsiveFontSizes
 } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { ReactComponent as Logo } from './Logo.svg';
+import LeagueSpartan from './fonts/LeagueSpartan-Bold.ttf';
+import LibreBaskerville from './fonts/LibreBaskerville-Regular.ttf';
 import Home from './pages/Home/Home';
 import Work from './pages/Work/Work';
 import Contact from './pages/Contact/Contact';
 import Blog from './pages/Blog/Blog';
-import { ReactComponent as Logo } from './Logo.svg';
-import LeagueSpartan from './fonts/LeagueSpartan-Bold.ttf';
-import LibreBaskerville from './fonts/LibreBaskerville-Regular.ttf';
+import Shopkeep from './pages/Work/Shopkeep/Shopkeep';
+import Bonito from './pages/Work/Bonito/Bonito';
 
 const league = {
 	fontFamily: 'League-Spartan',
@@ -83,6 +85,9 @@ let theme = createMuiTheme({
 		body2: {
 			fontFamily: 'LibreBaskerville, serif'
 		},
+		subtitle1: {
+			fontFamily: 'LibreBaskerville, serif'
+		},
 		fontFamily: 'League-Spartan, Roboto, sans-serif',
 		fontSize: '1rem'
 	},
@@ -119,20 +124,17 @@ function App() {
 								</Link>
 							</Typography>
 							<Typography variant="h3">
-								<Link to="../Work/Work" className="nav-link">
+								<Link to="/Work" className="nav-link">
 									Work
 								</Link>
 							</Typography>
 							<Typography variant="h3">
-								<Link
-									to="../Contact/Contact"
-									className="nav-link"
-								>
+								<Link to="/Contact" className="nav-link">
 									Contact
 								</Link>
 							</Typography>
 							<Typography variant="h3">
-								<Link to="../Blog/Blog" className="nav-link">
+								<Link to="/Blog" className="nav-link">
 									Blog
 								</Link>
 							</Typography>
@@ -140,9 +142,11 @@ function App() {
 					</AppBar>
 
 					<Route path="/" exact component={Home} />
-					<Route path="/work" component={Work} />
-					<Route path="/contact" component={Contact} />
-					<Route path="/blog" component={Blog} />
+					<Route path="/Work" component={Work} />
+					<Route path="/Contact" component={Contact} />
+					<Route path="/Blog" component={Blog} />
+					<Route path="/Work/Shopkeep" component={Shopkeep} />
+					<Route path="/Work/Bonito" component={Bonito} />
 				</div>
 			</BrowserRouter>
 		</ThemeProvider>

@@ -8,13 +8,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import ShopkeepLogo from './Shopkeep/logo.png';
 import BonitoLogo from './Bonito/logo.png';
-/*import Shopkeep from './Shopkeep/Shopkeep';
-import Bonito from './Bonito/Bonito';*/
+import Shopkeep from './Shopkeep/Shopkeep';
+import Bonito from './Bonito/Bonito';
 
 function Work() {
 	return (
 		<div className="page">
-			{/*<BrowserRouter>*/}
 			<Typography variant="h1" color="secondary" className="header">
 				PORTFOLIO OF WORK
 			</Typography>
@@ -56,6 +55,7 @@ function Work() {
 						</CardContent>
 					</Link>
 				</CardActionArea>
+				<Route path="/Work/Shopkeep" component={Shopkeep} />
 			</Card>
 			<Card
 				style={{
@@ -92,6 +92,7 @@ function Work() {
 						</CardContent>
 					</Link>
 				</CardActionArea>
+				<Route path="/Work/Bonito" component={Bonito} />
 			</Card>
 		</div>
 	);

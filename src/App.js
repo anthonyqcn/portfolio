@@ -17,8 +17,8 @@ import Home from './pages/Home/Home';
 import Work from './pages/Work/Work';
 import Contact from './pages/Contact/Contact';
 import Blog from './pages/Blog/Blog';
-import Shopkeep from './pages/Work/Shopkeep/Shopkeep';
-import Bonito from './pages/Work/Bonito/Bonito';
+//import Shopkeep from './pages/Work/Shopkeep/Shopkeep';
+//import Bonito from './pages/Work/Bonito/Bonito';
 
 const league = {
 	fontFamily: 'League-Spartan',
@@ -145,8 +145,8 @@ function App() {
 					<Route path="/Work" component={Work} />
 					<Route path="/Contact" component={Contact} />
 					<Route path="/Blog" component={Blog} />
-					<Route path="/Work/Shopkeep" component={Shopkeep} />
-					<Route path="/Work/Bonito" component={Bonito} />
+					{/*<Route path="/Work/Shopkeep" component={Shopkeep} />
+					<Route path="/Work/Bonito" component={Bonito} />*/}
 				</div>
 			</BrowserRouter>
 		</ThemeProvider>
